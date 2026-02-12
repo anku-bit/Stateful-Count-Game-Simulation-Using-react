@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #2f2f2f);
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.title {
+  font-size: 28px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.subtitle {
+  color: #bbb;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.board {
+  width: 280px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #3b3b3b;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  animation: slideUp 0.5s ease;
+}
+
+.row {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.row:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-weight: bold;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Player Colors */
+
+.blue { background: rgba(33, 150, 243, 0.2); }
+.blue button { background: #2196f3; color: white; }
+
+.yellow { background: rgba(251, 192, 45, 0.2); }
+.yellow button { background: #fbc02d; }
+
+.green { background: rgba(76, 175, 80, 0.2); }
+.green button { background: #4caf50; color: white; }
+
+.red { background: rgba(244, 67, 54, 0.2); }
+.red button { background: #f44336; color: white; }
+
+.reset {
+  margin-top: 15px;
+  background: #9c27b0;
+  color: white;
+}
+
+/* Winner Animation */
+
+.winner {
+  color: #4caf50;
+  animation: pop 0.4s ease;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
